@@ -1,26 +1,28 @@
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println(maxFinder( 16, 30));
-        System.out.println(maxFinder(12, 32));
-        System.out.println(maxFinder(22, 25));
-        System.out.println(maxFinder(14, 14));
-        System.out.println(maxFinder(10, 19));
-        System.out.println(maxFinder(17, 30));
+        double[] arrey1 = {1.2, 2.2, -1.5, 1.7, -1.8, -2.1, 1.2, 2.2, 1.5, -1.7, 1.8, 2.1, -3.2, 3.3, 4.2};
+        int index = 0;
+        double sum = 0.0;
+        boolean on = false;
+        for (double summedNumbers : arrey1) {
+            if (summedNumbers < 0) {
+                on = true;
+            } else if (on == true) {
+                sum += summedNumbers;
 
-    }
-
-    public static String maxFinder (int age, int temperature) {
-        if (age >= 20 && age <= 40 && temperature >= -20 && temperature <= 30)
-        return "Can go outside";
+            }
+        }
+        System.out.println(sum);
 
 
 
-        else if (age < 20 && temperature >= 0 && temperature <= 28)
-                return "Can go outside";
-        else if (age < 45 && temperature >= -10 && temperature <= 25)
-                return "Can go outside";
-        else
-                return "Stay at home";
+
+
+
+
+
 
 
 
