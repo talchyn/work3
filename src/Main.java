@@ -9,6 +9,7 @@ public class Main {
         for (double summedNumbers : arrey1) {
             if (summedNumbers < 0) {
                 on = true;
+
             }
             else if (on == true && summedNumbers > 0) {
                 sum += summedNumbers;
@@ -18,7 +19,9 @@ public class Main {
             }
         }
 
+        System.out.println(sum);
         System.out.println(sum / amount);
+        System.out.println(amount);
 
 
 
